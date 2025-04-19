@@ -4,7 +4,7 @@
   Descreva de forma breve o que o sistema faz, seus principais objetivos e funcionalidades. Indique o propósito do sistema e como ele resolve o problema.  
   
   **Exemplo:**  
-  "O sistema **Carta do Dia** oferece aos usuários uma reflexão diária através do sorteio de cartas de tarot aleatórias, com animação e citação relacionada. O objetivo é proporcionar um momento de introspecção e autoconhecimento."  
+  "O sistema **Cartas do Destino** oferece aos usuários uma reflexão diária através do sorteio de cartas de tarot aleatórias, com animação e citação relacionada. O objetivo é proporcionar um momento de introspecção e autoconhecimento."  
   
 ---
 - ## 2. Requisitos do Sistema
@@ -148,3 +148,108 @@
   
 ---
 - ### Caso de Uso 10: Alterar Senha
+- **Ator:** Usuário autenticado
+- **Descrição:** Permite troca da senha atual.
+- #### Fluxo Principal:
+	1. O usuário acessa a área de "Alterar senha".
+	2. Informa a senha atual.
+	3. Informa nova senha e confirmação.
+	4. O sistema valida e atualiza.
+
+- #### Validações:
+- Senha nova deve ser segura e diferente da anterior.
+  
+---
+- ### Caso de Uso 11: Alterar E-mail
+- **Ator:** Usuário autenticado
+- **Descrição:** Permite alterar o e-mail de login.
+- #### Fluxo Principal:
+	1. O usuário acessa as configurações de conta.
+	2. Informa novo e-mail e senha atual.
+	3. O sistema valida os dados.
+	4. O sistema atualiza o e-mail.
+	5. O sistema notifica o usuário.
+
+- #### Validações:
+- O novo e-mail não pode estar em uso.
+  
+---
+-
+- ## 4. Arquitetura do Sistema
+- ### Componentes Principais:
+- **Frontend:** Interface com o usuário, utilizando HTML, CSS e JavaScript.
+- **Backend:** Responsável pela lógica de negócios e interação com o banco de dados, utilizando Node.js ou outro framework.
+- **Banco de Dados:** Onde os dados são armazenados, como SQLite ou MySQL.
+- **Autenticação:** Utilização de JWT (JSON Web Tokens) para autenticação de usuários.
+- ### Fluxo de Dados:
+	1. O usuário faz login no sistema.
+	2. O frontend envia uma requisição para o backend, que valida as credenciais.
+	3. O backend consulta o banco de dados para obter as cartas salvas do usuário, se houver.
+	4. O backend sorteia uma carta aleatória e a envia ao frontend.
+	5. O frontend exibe a carta e animação.
+---
+
+- ## 5. Estrutura do Banco de Dados
+- ### Tabelas e Entidades Principais:
+- **Usuários**
+	- id (PK)
+	- email (único)
+	- senha_hash
+- **CartasSalvas**
+	- id (PK)
+	- id_usuario (FK)
+	- nome_carta
+	- data_sorteio
+	    
+	  **Relacionamento:**  
+	  Um usuário pode ter várias cartas salvas, então existe um relacionamento 1:N entre a tabela `Usuários` e `CartasSalvas`.  
+	    
+---
+- ## 6. Fluxo de Navegação (Wireframes)
+  
+  Descreva a navegação básica do sistema com imagens ou diagramas.  
+  
+	1. **Tela de Login:** O usuário faz login usando email e senha.
+	2. **Tela Inicial:** Exibe a carta virada; o usuário pode clicar para ver a animação da carta.
+	3. **Tela de Cartas Salvas:** O usuário pode visualizar, editar ou excluir cartas que ele salvou.
+---
+
+- ## 7. Regras de Negócio
+  
+  Defina as regras essenciais para o sistema funcionar corretamente.  
+- **RN01:** Um usuário pode salvar apenas uma carta por vez. Caso queira salvar uma nova, deve excluir a carta anterior.
+- **RN02:** O sistema garante que o email do usuário seja único.
+- **RN03:** O sistema só permite o sorteio de uma carta nova uma vez a cada 24 horas.
+  
+---
+- ## 8. Tecnologias Utilizadas
+  
+  Liste as tecnologias escolhidas para o desenvolvimento do sistema.  
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Banco de Dados:** SQLite
+- **Autenticação:** JWT (JSON Web Tokens)
+  
+---
+- ## 9. Testes
+  
+  Descreva os tipos de testes que serão feitos para garantir o funcionamento do sistema.  
+- **Testes Unitários:** Testar funções do backend isoladamente.
+- **Testes de Integração:** Testar se o frontend, backend e banco de dados estão funcionando corretamente juntos.
+- **Testes Funcionais:** Testar se o sistema atende aos requisitos funcionais definidos.
+  
+---
+- ## 10. Plano de Lançamento
+  
+  Descreva as etapas para colocar o sistema em produção.  
+  
+	1. **Verificação de Testes:** Certifique-se de que todos os testes passaram.
+	2. **Configuração do Ambiente de Produção:** Ajuste as configurações para produção.
+	3. **Lançamento Beta:** Lançamento para um grupo pequeno de usuários para testes.
+	4. **Ajustes Finais:** Corrigir bugs com base no feedback dos usuários beta.
+	5. **Lançamento Oficial:** Colocar o sistema disponível para o público em geral.
+---
+
+- ## Conclusão
+  
+  Essa documentação oferece uma visão clara e estruturada sobre o seu sistema, abordando todos os aspectos necessários, desde os requisitos até o plano de lançamento. Ela deve servir como um guia fácil de seguir para o desenvolvimento do sistema, além de proporcionar clareza para qualquer pessoa que precise entender ou trabalhar no projeto.
