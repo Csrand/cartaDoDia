@@ -249,7 +249,3 @@
 	4. **Ajustes Finais:** Corrigir bugs com base no feedback dos usuários beta.
 	5. **Lançamento Oficial:** Colocar o sistema disponível para o público em geral.
 ---
-
-- ## Conclusão
-  
-  Essa documentação oferece uma visão clara e estruturada sobre o seu sistema, abordando todos os aspectos necessários, desde os requisitos até o plano de lançamento. Ela deve servir como um guia fácil de seguir para o desenvolvimento do sistema, além de proporcionar clareza para qualquer pessoa que precise entender ou trabalhar no projeto.
