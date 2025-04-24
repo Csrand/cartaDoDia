@@ -211,7 +211,6 @@
 ---
 - ## VIII. Fluxo de Navegação (Wireframes)
   
-  Descreva a navegação básica do sistema com imagens ou diagramas.  
   
 ---![image](https://github.com/user-attachments/assets/5da80ed9-7a7c-472c-a057-b64381e78ef9)
 
