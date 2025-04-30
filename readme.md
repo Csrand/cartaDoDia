@@ -19,6 +19,7 @@
 - **RF07:** O sistema deve ter uma tela para o usuário fazer o cadastro no sistema colocando seu e-mail que deve ser único por usuário junto com a senha que o usário vai criar e repetir dentro do formulario exibido na tela para a validação do front-end e será enviado ao back-end para validação através do botão "Cadastrar".
 - **RF08:** O sistema deve ter uma tela para o usuário solicitar a recuperação de sua senha atráves da entrada do seu e-mail dentro do formulário e é enviado ao back-end para validação através do botão "Confirmar e-mail".
 - **RF09:** O sistema deve ter uma tela para o usuário criar uma nova senha informando a nova senha desejada e digitando novamente para a validação do front-end e deve ser enviada para validação através do botão "Confirmar".
+- **RF10** O sistema deve ter uma tela onde sera apresentado ao usuário através de texto e imagens informações sobre o site e sobre o seu funcionamento. a pagina deve será a pagina principal e deve ter links através de botões funcionais para a navegação nas demais paginas e para o cadastro e uso do sistema.
 - ### Requisitos Não Funcionais (RNF)
   Descreva características como desempenho, segurança, usabilidade, etc.  
 - **RNF01:** O sistema deve ser responsivo, adaptando-se bem a dispositivos móveis e desktops.
